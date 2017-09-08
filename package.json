@@ -1,0 +1,22 @@
+{
+  "name": "garageremote",
+  "version": "1.0.0",
+  "description": "Simple garage remote using RPI",
+  "main": "garageRemote.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bpalomino5/GarageRemote.git"
+  },
+  "author": "Brandon Palomino",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bpalomino5/GarageRemote/issues"
+  },
+  "homepage": "https://github.com/bpalomino5/GarageRemote#readme",
+  "dependencies": {
+    "blynk-library": "^0.4.7"
+  }
+}
