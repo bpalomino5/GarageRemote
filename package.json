@@ -18,6 +18,7 @@
   "homepage": "https://github.com/bpalomino5/GarageRemote#readme",
   "dependencies": {
     "blynk-library": "^0.4.7",
-    "onoff": "^1.1.7"
+    "onoff": "^1.1.7",
+    "pigpio": "^0.6.1"
   }
 }
