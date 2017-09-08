@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 //Author: Brandon Palomino
 //Date: 9/7/17
-//Description: 
+//Description: Simple Garage Remote Application using RPI and physical remote
 
 
 // Setup Pins
@@ -12,7 +12,7 @@ var RELAY_ON = 0        // GPIO.LOW 0
 var RELAY_OFF = 1    // GPIO.HIGH 1
 
 // Blynk Cloud Token
-var blynkToken = '9a5060fcbcc0434481fb75eb8cbc036a';    // BLYNK TOKEN
+var blynkToken = '360f02cc70e5449dbc5f60fee3ca6931';    // BLYNK TOKEN
 
 var Gpio = require('pigpio').Gpio,
   SWITCH = new Gpio(PIN_SWITCH, {mode: Gpio.OUTPUT});
@@ -29,9 +29,15 @@ blynk.on('disconnect', function() { console.log("DISCONNECT"); });
 
 v0.on('write', function(param) {
 	if (param[0] === '1'){
-		OpenGarage()
-	} else {
-		CloseGarage()
-	}
-})
+		TriggerGarage()
+	} 
+});
 
+function TriggerGarage() {
+	SWITCH.digitalWrite(RELAY_ON);
+	setTimeout(EndTrigger(), 3000);
+}
+
+function EndTrigger() {
+	SWITCH.digitalWrite(RELAY_OFF);
+}
