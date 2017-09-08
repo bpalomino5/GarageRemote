@@ -40,5 +40,5 @@ function EndTrigger() {
 
 function TriggerGarage() {
 	SWITCH.digitalWrite(RELAY_ON);
-	setTimeout(EndTrigger(), 3000);
+	setTimeout(EndTrigger, 3000);
 }
