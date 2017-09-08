@@ -8,8 +8,8 @@
 var PIN_SWITCH = 21
 
 // Helper Settings
-var RELAY_ON = 0        // GPIO.LOW 0
-var RELAY_OFF = 1    // GPIO.HIGH 1
+var RELAY_ON = 1        // GPIO.LOW 0
+var RELAY_OFF = 0    // GPIO.HIGH 1
 
 // Blynk Cloud Token
 var blynkToken = '360f02cc70e5449dbc5f60fee3ca6931';    // BLYNK TOKEN
