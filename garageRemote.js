@@ -33,11 +33,12 @@ v0.on('write', function(param) {
 	} 
 });
 
-function TriggerGarage() {
-	SWITCH.digitalWrite(RELAY_ON);
-	setTimeout(EndTrigger(), 3000);
-}
 
 function EndTrigger() {
 	SWITCH.digitalWrite(RELAY_OFF);
+}
+
+function TriggerGarage() {
+	SWITCH.digitalWrite(RELAY_ON);
+	setTimeout(EndTrigger(), 3000);
 }
