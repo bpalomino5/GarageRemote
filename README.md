@@ -9,3 +9,5 @@ To stop:
 If restarting again:
 - clean logs with: sudo forever cleanlogs
 - remove out.log from project directory: rm out.log
+To restart (very useful)
+- sudo forever restart 0
